@@ -86,6 +86,72 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_D_Schottky
+#
+DEF Device_D_Schottky D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_D_Schottky" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 10 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 10 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Jumper_NO_Small
+#
+DEF Device_Jumper_NO_Small JP 0 30 N N 1 F N
+F0 "JP" 0 80 50 H V C CNN
+F1 "Device_Jumper_NO_Small" 10 -60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Open*
+ Jumper*
+ TestPoint*2Pads*
+ TestPoint*Bridge*
+$ENDFPLIST
+DRAW
+C -40 0 20 0 1 0 N
+C 40 0 20 0 1 0 N
+X 1 1 -100 0 40 R 50 50 0 1 P
+X 2 2 100 0 40 L 50 50 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_L
+#
+DEF Device_L L 0 40 N N 1 F N
+F0 "L" -50 0 50 V V C CNN
+F1 "Device_L" 75 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
+A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
+A 0 25 25 -899 899 0 1 0 N 0 0 0 50
+A 0 75 25 -899 899 0 1 0 N 0 50 0 100
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_LED
 #
 DEF Device_LED D 0 40 N N 1 F N
@@ -286,19 +352,20 @@ X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aimtec_dcdc_AM1SS-n(j)z
+# pl_diodesInc_dcdc_AP3012
 #
-DEF aimtec_dcdc_AM1SS-n(j)z U 0 40 Y Y 1 F N
-F0 "U" 250 -600 50 H V C CNN
-F1 "aimtec_dcdc_AM1SS-n(j)z" 0 100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+DEF pl_diodesInc_dcdc_AP3012 U 0 40 Y Y 1 F N
+F0 "U" 350 -450 50 H V C CNN
+F1 "pl_diodesInc_dcdc_AP3012" 0 200 50 H V C CNN
+F2 "Package_TO_SOT_SMD:SOT-23-5" -50 0 50 H I C CNN
+F3 "" -50 0 50 H I C CNN
 DRAW
-S -300 50 300 -550 0 1 0 f
-X -Vin 1 -400 -500 100 R 50 50 1 1 W
-X +Vin 2 -400 0 100 R 50 50 1 1 W
-X -Vout 3 400 -500 100 L 50 50 1 1 W
-X +Vout 4 400 0 100 L 50 50 1 1 W
+S -400 150 400 -400 0 1 0 f
+X SW 1 200 250 100 D 50 50 1 1 I
+X GND 2 0 -500 100 U 50 50 1 1 W
+X FB 3 500 -150 100 L 50 50 1 1 I
+X ~SHDN 4 -500 -150 100 R 50 50 1 1 I
+X Vin 5 -200 250 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
