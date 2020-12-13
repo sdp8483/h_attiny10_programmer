@@ -544,7 +544,7 @@ U 1 1 5FED7163
 P 7700 3700
 F 0 "U4" H 7200 4250 50  0000 L BNN
 F 1 "ATtiny10-TS" H 7800 3150 50  0000 L TNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 7700 3700 50  0001 C CIN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 7700 3700 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf" H 7700 3700 50  0001 C CNN
 	1    7700 3700
 	1    0    0    -1  
