@@ -1,0 +1,20 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# AM1SS-n(j)z
+#
+DEF AM1SS-n(j)z U 0 40 Y Y 1 F N
+F0 "U" 250 -600 50 H V C CNN
+F1 "AM1SS-n(j)z" 0 100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -300 50 300 -550 0 1 0 f
+X -Vin 1 -400 -500 100 R 50 50 1 1 W
+X +Vin 2 -400 0 100 R 50 50 1 1 W
+X -Vout 3 400 -500 100 L 50 50 1 1 W
+X +Vout 4 400 0 100 L 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library
