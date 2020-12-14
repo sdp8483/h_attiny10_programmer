@@ -709,7 +709,7 @@ F 1 "2N3906" H 6500 3000 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6500 2925 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 6300 3000 50  0001 L CNN
 	1    6300 3000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	7850 1250 8000 1250
