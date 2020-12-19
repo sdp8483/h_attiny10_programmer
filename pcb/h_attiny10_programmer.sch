@@ -712,22 +712,22 @@ F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 6300 3000 50  0001 L 
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	7850 1250 8000 1250
+	6500 1300 6550 1300
 Wire Wire Line
-	7850 1350 8000 1350
+	6500 1400 6650 1400
 Wire Wire Line
-	8000 1450 7850 1450
+	6650 1500 6500 1500
 Wire Notes Line
-	8300 550  8300 2100
+	6950 550  6950 2100
 Wire Notes Line
-	7050 550  8300 550 
+	5700 550  6950 550 
 Wire Notes Line
-	7050 2100 7050 550 
+	5700 2100 5700 550 
 Wire Notes Line
-	8300 2100 7050 2100
+	6950 2100 5700 2100
 Wire Notes Line
-	7050 650  8300 650 
-Text Notes 7050 650  0    50   ~ 0
+	5700 650  6950 650 
+Text Notes 5700 650  0    50   ~ 0
 TPI Programming Interface
 Wire Wire Line
 	4750 3200 4900 3200
@@ -798,40 +798,25 @@ F 3 "" H 5600 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AVR-TPI-6 J8
-U 1 1 5FDF9B9A
-P 7450 1350
-F 0 "J8" H 7200 1700 50  0000 L CNN
-F 1 "AVR-TPI-6" H 7450 1700 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 7200 1300 50  0001 C CNN
-F 3 " ~" H 6175 800 50  0001 C CNN
-	1    7450 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 1850 7350 1750
-$Comp
 L power:GND #PWR017
 U 1 1 5FDF651F
-P 7350 1850
-F 0 "#PWR017" H 7350 1600 50  0001 C CNN
-F 1 "GND" H 7350 1700 50  0000 C CNN
-F 2 "" H 7350 1850 50  0001 C CNN
-F 3 "" H 7350 1850 50  0001 C CNN
-	1    7350 1850
+P 6000 1850
+F 0 "#PWR017" H 6000 1600 50  0001 C CNN
+F 1 "GND" H 6000 1700 50  0000 C CNN
+F 2 "" H 6000 1850 50  0001 C CNN
+F 3 "" H 6000 1850 50  0001 C CNN
+	1    6000 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7350 950  7350 850 
 $Comp
 L power:+5V #PWR016
 U 1 1 5FDF54B6
-P 7350 850
-F 0 "#PWR016" H 7350 700 50  0001 C CNN
-F 1 "+5V" H 7350 990 50  0000 C CNN
-F 2 "" H 7350 850 50  0001 C CNN
-F 3 "" H 7350 850 50  0001 C CNN
-	1    7350 850 
+P 6000 850
+F 0 "#PWR016" H 6000 700 50  0001 C CNN
+F 1 "+5V" H 6000 990 50  0000 C CNN
+F 2 "" H 6000 850 50  0001 C CNN
+F 3 "" H 6000 850 50  0001 C CNN
+	1    6000 850 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1519,11 +1504,11 @@ Text GLabel 8950 4950 2    50   Input ~ 0
 PB3
 Text GLabel 8950 4050 2    50   Input ~ 0
 PB2
-Text GLabel 8000 1250 2    50   Input ~ 0
+Text GLabel 6650 1300 2    50   Input ~ 0
 DATA
-Text GLabel 8000 1350 2    50   Input ~ 0
+Text GLabel 6650 1400 2    50   Input ~ 0
 CLK
-Text GLabel 8000 1450 2    50   Input ~ 0
+Text GLabel 6650 1500 2    50   Input ~ 0
 RESET
 Text GLabel 6500 3300 2    50   Input ~ 0
 PROG_12V
@@ -1603,4 +1588,28 @@ F 3 "~" H 3600 7500 50  0001 C CNN
 	1    3600 7500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:AVR-ISP-6 J8
+U 1 1 5FDEE36F
+P 6100 1400
+F 0 "J8" H 5850 1850 50  0000 L CNN
+F 1 "USBasp-ISP" H 6100 1850 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 5850 1450 50  0001 C CNN
+F 3 " ~" H 4825 850 50  0001 C CNN
+	1    6100 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 900  6000 850 
+Wire Wire Line
+	6000 1800 6000 1850
+Wire Wire Line
+	6500 1200 6550 1200
+Wire Wire Line
+	6550 1200 6550 1300
+Connection ~ 6550 1300
+Wire Wire Line
+	6550 1300 6650 1300
+Text Notes 7050 900  0    50   ~ 0
+For USBasp MOSI is TPIDATA\nFrom Ben Heck Video MISO on AVRISP MkII MISO is TPIDATA\ncut trace if needed for programmer
 $EndSCHEMATC
